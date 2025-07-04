@@ -1,0 +1,1329 @@
+/* General Body and Font Styles */
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #1a1a1a,
+    #0a0a0a,
+    #1a1a1a
+  ); /* Dark grey to black gradient */
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite; /* Smooth, slow animation */
+  color: #e0e0e0; /* Light grey text */
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Keyframe animation for the background gradient */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* New keyframe for button */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.space {
+  opacity: 0;
+}
+/* for the scorlling animation*/
+.scroll-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease-out;
+}
+
+.scroll-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Container for content to center and limit width */
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Section Styling */
+section {
+  padding: 4rem 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative; /* Needed for absolute positioning of background text */
+  overflow: hidden; /* Hide overflow for background text */
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  margin-top: 1.5rem;
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+
+  background-color: rgba(17, 24, 39, 0.703); /* Dark grey with opacity */
+  backdrop-filter: blur(2px);
+
+  border: 0.1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #8a22f2 !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+}
+
+.navbar-brand:hover {
+  color: #7c1ba6;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.nav-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  background-color: #3d167394;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+#hero .hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 896px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hero h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+#hero h1 span {
+  opacity: 0;
+  animation: fadeInText 0.8s forwards;
+}
+
+/* Delay for each span to create a typing effect */
+
+#hero h1 span:nth-child(4) {
+  animation-delay: 0.8s;
+}
+#hero h1 span:nth-child(5) {
+  animation-delay: 1s;
+}
+#hero h1 span:nth-child(6) {
+  animation-delay: 1.2s;
+}
+#hero h1 span:nth-child(7) {
+  animation-delay: 1.4s;
+}
+#hero h1 span:nth-child(8) {
+  animation-delay: 1.6s;
+}
+#hero h1 span:nth-child(9) {
+  animation-delay: 1.8s;
+}
+#hero h1 span:nth-child(10) {
+  animation-delay: 2s;
+}
+#hero h1 span:nth-child(11) {
+  animation-delay: 2.2s;
+}
+#hero h1 span:nth-child(12) {
+  animation-delay: 2.4s;
+}
+#hero h1 span:nth-child(13) {
+  animation-delay: 2.6s;
+}
+#hero h1 span:nth-child(14) {
+  animation-delay: 2.8s;
+}
+#hero h1 span:nth-child(15) {
+  animation-delay: 3s;
+}
+#hero h1 span:nth-child(16) {
+  animation-delay: 3.2s;
+}
+#hero h1 span:nth-child(17) {
+  animation-delay: 3.4s;
+}
+#hero h1 span:nth-child(18) {
+  animation-delay: 3.6s;
+}
+#hero h1 span:nth-child(19) {
+  animation-delay: 3.8s;
+}
+#hero h1 span:nth-child(20) {
+  animation-delay: 4s;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#hero h1 .text-accent {
+  color: #8a22f2;
+}
+
+#hero p {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+}
+
+#hero p span {
+  /* Start hidden */
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 4.5s;
+}
+
+/* delay for the paragraph*/
+.btn-primary {
+  display: inline-block;
+  /* Gradient with 5 colors from your palette, transitioning from dark blue to pink */
+  background: linear-gradient(
+    to right,
+    #7c1ba6,
+    #8a22f2,
+    #7c1ed9,
+    #a62461,
+    #d95b7d
+  );
+  background-size: 400% 100%; /* Make background 4 times wider for a smooth multi-color shift */
+  background-position: 0% 0%; /* Start position */
+
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  transform: translateZ(0);
+  /* Ensure background-position is included in the transition */
+  transition: background-position 0.7s ease, transform 0.3s ease; /* Slightly longer transition for more colors */
+  text-decoration: none;
+  opacity: 0; /* Still hidden for initial animation */
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 4.5s;
+}
+
+.btn-primary:hover {
+  background-position: 100% 0%; /* Shift the gradient to the right on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* About Section */
+
+#about {
+  position: relative;
+  overflow: hidden;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* New Gradient Line for Demo */
+.about-gradient-line {
+  position: absolute;
+  top: 85%; /* Adjusted to 50% for better centering within the reduced #about section */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for true centering */
+  width: 60%; /* Width of the line */
+  max-width: 800px; /* Max width to prevent it from being too long on large screens */
+  height: 3px; /* Thickness of the line */
+  z-index: 1; /* Ensure it's visible */
+
+  /* The core gradient for the line */
+  background: linear-gradient(
+    to right,
+    #7c1ba6,
+    #8a22f2,
+    #7c1ed9,
+    #371559,
+    #7c1ed9,
+    #8a22f2,
+    #7c1ba6
+  );
+
+  /* Mask to make it fade out at the ends and visible only in the center */
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* For WebKit browsers */
+
+  /* Optional: Add a subtle pulse animation to the line */
+  animation: pulseLine 3s infinite alternate ease-in-out;
+}
+
+@keyframes pulseLine {
+  0% {
+    transform: translate(-50%, -50%) scaleX(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scaleX(1.05);
+    opacity: 1;
+  }
+}
+#about .about-content {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative; /* Ensure content is above background text */
+  z-index: 2;
+}
+
+#about h2 {
+  font-size: 3.4rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #ffffff; /* Changed to white */
+  position: relative;
+  z-index: 2;
+}
+
+/* Large shadowed "ABOUT ME" text in the background */
+#about .background-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.084); /* Very transparent white */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.863); /* Dark shadow */
+
+  user-select: none; /* Prevent selection */
+  pointer-events: none; /* Allow clicks to pass through */
+  z-index: 1; /* Behind the main content */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* smaller screens */
+@media (max-width: 767px) {
+  #about .background-text {
+    font-size: 4rem;
+  }
+  #about {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  /* desktop */
+  #about .background-text {
+    font-size: 8rem;
+  }
+  #about {
+    padding: 3rem 0rem;
+  }
+}
+/* Section Styling (Global - should be defined once) */
+section {
+  padding: 3rem 0; /* Default padding for all sections */
+  min-height: auto; /* Allow sections to shrink to content height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Responsive adjustment for section padding on smaller screens */
+@media (max-width: 767px) {
+  section {
+    padding: 2rem 2rem;
+  }
+}
+/* My Story Section (New Photo & Text Section) */
+
+/* My Story Section (New Photo & Text Section) */
+#my-story {
+  margin-top: 0;
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column; /* Default to column for mobile */
+  align-items: center;
+  gap: 3rem; /* Space between photo and text */
+}
+#my-story .my-story-content {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column; /* Default to column for mobile */
+  align-items: center;
+  gap: 7rem;
+  width: 100%;
+}
+
+/* --- */
+
+/* Photo Container and Hover Effect */
+
+#my-story .photo-container {
+  margin-top: 10rem;
+  flex-shrink: 0;
+  width: 280px;
+  height: 260px;
+  border-radius: 50%;
+  /* overflow: hidden;*/
+  border: 4px solid #7b1ed989;
+  box-shadow: 0 0 10px 5px rgba(123, 30, 217, 0.4),
+    0 0 30px 10px rgba(55, 21, 89, 0.3), 0 0 60px 20px rgba(123, 30, 217, 0.15);
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+#my-story .photo-container:hover {
+  transform: scale(1.08);
+}
+
+#my-story .photo-container .image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+#my-story .photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25%;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+#my-story .photo-container:hover img {
+  transform: translateY(-5px);
+}
+
+.photo-container .stamp {
+  position: absolute;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+.stamp1 {
+  top: -1.5rem;
+  right: -1.5rem;
+  background-color: #7c1ba6;
+}
+
+.stamp2 {
+  bottom: -1.5rem;
+  left: -1.5rem;
+  background-color: #7c1ed9;
+}
+
+/* --- */
+
+/* Story Text Content sections */
+#my-story .story-text-content {
+  flex-grow: 1;
+  max-width: 768px;
+  text-align: start;
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack its children vertically */
+  gap: 1.5rem; /* Space between each new section */
+}
+
+#my-story .story-text-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem; /* Reduced margin, as gap handles spacing now */
+}
+
+#my-story .story-text-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+  padding-bottom: 0.5rem;
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem; /* Slightly reduced as sections have gaps */
+}
+
+.text-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* What I Do List Styling */
+.what-i-do-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.what-i-do-section ul li {
+  background-color: rgba(55, 21, 89, 0.2); /* Light background for list items */
+  margin-bottom: 0.75rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8rem;
+  border: 0.1px solid rgba(255, 255, 255, 0.1) !important;
+  align-items: center;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.what-i-do-section ul li:hover {
+  background-color: rgba(55, 21, 89, 0.4);
+  transform: scale(1.05);
+}
+
+.what-i-do-section ul li svg {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+.what-i-do-section .svg1 svg {
+  color: #8a22f2;
+}
+.what-i-do-section .svg2 svg {
+  color: orange;
+}
+.what-i-do-section .svg3 svg {
+  color: #d69a9d;
+}
+.what-i-do-section .svg4 svg {
+  color: #95d904;
+}
+/* Connect Section Social Links */
+.social-links {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 1.5rem;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: start;
+  text-decoration: none;
+  color: #e5e7eb;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a svg {
+  height: 100%;
+  color: white; /* Icon color */
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+  width: 1.5rem;
+}
+
+.social-links svg:hover {
+  color: #c0b0d6;
+  transform: scale(1.5);
+}
+
+/* CTA Button */
+.btn-resume {
+  width: 40% !important;
+  height: 3rem;
+  transform: translateZ(0);
+  /* Ensure background-position is included in the transition */
+  transition: none; /* Slightly longer transition for more colors */
+  text-decoration: none;
+  opacity: 1; /* Still hidden for initial animation */
+  animation: none;
+  animation-delay: none;
+
+  border: none !important;
+}
+/* --- */
+
+/* Gradient Letter (Existing) */
+.gradient-letter {
+  background: linear-gradient(to right, #8a22f2, #7c1ba6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Hover underline for name (Existing) */
+.text-accent-light.hover-underline {
+  position: relative;
+  display: inline-block;
+  color: #7c1ed9;
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #8a22f2, #7c1ba6);
+  transition: width 0.3s ease-out;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* --- */
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  #my-story .my-story-content {
+    flex-direction: row; /* Change to row for larger screens */
+    text-align: left;
+    align-items: flex-start; /* Align items to the start (top) of the cross axis */
+  }
+
+  #my-story .photo-container {
+    margin-bottom: 0; /* Remove bottom margin on larger screens */
+  }
+
+  #my-story .story-text-content {
+    text-align: left; /* Ensure text aligns left on larger screens */
+  }
+
+  .social-links {
+    justify-content: flex-start; /* Align social links to the left */
+  }
+  .btn-resume {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #my-story .story-text-content h3 {
+    font-size: 1.7rem;
+  }
+
+  #my-story .story-text-content p {
+    font-size: 1rem;
+  }
+
+  .btn-resume {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    width: 100% !important;
+  }
+}
+
+/* Projects Section */
+#projects {
+  color: #e5e7eb;
+  padding: 4rem 1rem;
+}
+
+#projects .projects-content {
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#projects h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #4a70a8;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#projects h3 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.project-card {
+  background-color: #1f2937;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px#040404cc;
+}
+
+.project-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.project-card p {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+.project-links-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.project-link-btn.white {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #ffffff;
+}
+
+.project-link-btn.white:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-link-btn.themed {
+  background: linear-gradient(
+    to right,
+    #7c1ba6,
+    #8a22f2,
+    #7c1ed9,
+    #a62461,
+    #d95b7d
+  );
+  background-size: 400% 100%; /* Make background 4 times wider for a smooth multi-color shift */
+  background-position: 0% 0%; /* Start position */
+  color: white;
+  font-weight: bold;
+}
+
+.project-link-btn.themed:hover {
+  background-color: #3d1673;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-link-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+/* Glowing Border Effect */
+.glowing-border::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 45%,
+    #8a22f2 50%,
+    transparent 55%,
+    transparent 100%
+  );
+  animation: rotateBorder 4s linear infinite;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.glowing-border::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #0a0b0b;
+  border-radius: 0.5rem;
+  z-index: -1;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.glowing-border > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Academic Journey Section Specific Styles */
+#academic-journey {
+  /* Inherits general section padding and background from body */
+  padding-top: 4rem;
+  padding-bottom: 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.academic-container {
+  display: flex;
+  align-items: flex-start;
+  margin: 2rem 2rem 0rem 2rem;
+  position: relative;
+  padding-top: 2rem;
+  max-width: 1200px; /* Limit overall width for better readability */
+  width: 100%;
+}
+
+/* for the scroll animations*/
+.academic-scroll-content {
+  opacity: 0;
+  transform: translateY(3.125rem);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.academic-scroll-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Vertical curvy timeline using SVG */
+#academic-curvy-svg {
+  position: absolute;
+  left: 4rem;
+  top: 0;
+  width: 4rem;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#academic-timeline-path {
+  stroke: #8a22f2;
+  stroke-width: 2;
+  fill: none;
+  filter: drop-shadow(0 0 6px #8a22f2);
+}
+
+.academic-content {
+  flex: 1;
+  margin-left: 6rem;
+  width: calc(100% - 6rem); /* Adjust content width */
+}
+
+.academic-block {
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 8rem; /* Reduced margin between blocks */
+  opacity: 0.3;
+  transition: opacity 0.6s ease;
+}
+
+.academic-block.visible {
+  opacity: 1;
+}
+
+.academic-dot {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #8a22f2; /* Darker grey dot */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+
+.academic-dot.active {
+  background-color: #7c1ed9;
+  transform: scale(1.2);
+  box-shadow: 0 0 0.5rem #7c1ed9, 0 0 1rem #7c1ed9, 0 0 2rem #7c1ed9,
+    0 0 3rem rgba(124, 30, 217, 0.6);
+}
+
+/* heading*/
+.academic-content h1 {
+  font-family: "Amarante", serif;
+  letter-spacing: 0.5rem;
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+  font-weight: 100;
+  text-align: center;
+  width: 100%; /* Ensure heading takes full width */
+  color: #ffffff; /* Ensure heading is white */
+}
+
+.academic-content-text {
+  width: 80%;
+  max-width: 600px; /* Limit content text width for readability */
+}
+
+.academic-content-text h3 {
+  font-size: 1.8rem; /* Slightly larger for headings */
+  letter-spacing: 0.05rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.academic-content-text ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.academic-content-text ul li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+.academic-content-text .academic-year {
+  font-size: 1.2rem; /* Size for year */
+  padding-top: 0.5rem;
+  color: rgb(207, 207, 207);
+  font-weight: 600;
+  display: block; /* Make it a block element for spacing */
+  margin-bottom: 1rem;
+}
+.academic-edu {
+  color: #2ecc71; /* Green */
+}
+.academic-award {
+  color: #ffd700; /* Gold */
+}
+.academic-calendar {
+  color: #68b6f2; /* blue for date */
+}
+
+.academic-content-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.75rem;
+}
+
+.academic-content-text ul li {
+  background-color: rgba(55, 21, 89, 0.2); /* Light background for list items */
+  margin-bottom: 0.75rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8rem;
+  border: 0.1px solid rgba(255, 255, 255, 0.1) !important;
+  align-items: center;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+
+  width: 50%;
+}
+
+.academic-content-text ul li:hover {
+  background-color: rgba(55, 21, 89, 0.4);
+  transform: scale(1.05);
+}
+
+.academic-content-text ul li svg {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  #academic-journey {
+    padding: 2rem 0; /* Adjust padding for mobile */
+  }
+  .academic-container {
+    margin: 1rem;
+    padding-top: 1rem;
+  }
+  #academic-curvy-svg {
+    left: 2rem; /* Adjust SVG position for smaller screens */
+  }
+  .academic-content {
+    margin-left: 4rem; /* Adjust content margin for smaller screens */
+  }
+  .academic-block {
+    margin-bottom: 5rem; /* Reduce block margin further on mobile */
+  }
+  .academic-dot {
+    left: -1rem; /* Adjust dot position for smaller screens */
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .academic-content h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+  }
+  .academic-content-text {
+    width: 95%; /* Adjust width for mobile */
+  }
+  .academic-content-text h3 {
+    font-size: 1.4rem;
+  }
+  .academic-content-text ul li {
+    font-size: 1rem;
+    width: 80%;
+  }
+  .academic-content-text .academic-year {
+    font-size: 1.1rem;
+  }
+}
+/* Contact Section */
+#contact {
+  color: #e5e7eb;
+  padding: 4rem 1rem 1rem 1rem;
+}
+
+#contact .contact-content {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+#contact p {
+  font-size: 1.125rem;
+  line-height: 1.625;
+  margin-bottom: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+  background-color: rgba(255, 255, 255, 0.498);
+  color: black;
+}
+
+.contact-links a:hover {
+  transform: translateY(-2px);
+  background-color: white;
+}
+
+.contact-links a svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.footer-text {
+  margin-top: 2rem;
+  margin-bottom: 0 !important;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+/* the last contant me image*/
+.image-card {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.image-card img {
+  height: 100%;
+  width: 15rem;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.5s ease;
+  border-radius: 1rem;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Comment tags on image */
+.comment-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* make sure hover only applies to the image */
+}
+
+.comment {
+  position: absolute;
+  background-color: rgba(123, 30, 217, 0.85);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(0);
+  transition: transform 0.4s ease;
+  pointer-events: none;
+}
+
+.image-card:hover .comment {
+  transform: translateY(-5px);
+}
+
+/* Positioning */
+.comment.top-left {
+  top: 1rem;
+  left: 1rem;
+}
+
+.comment.bottom-right {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c1ba6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #371559;
+}
+
+#hero {
+  min-height: 100vh; /* Keep hero section full height */
+}
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  /* md: breakpoint */
+  #hero h1 {
+    font-size: 3.75rem;
+  }
+  #hero p {
+    font-size: 1.5rem;
+  }
+  #projects h3 {
+    text-align: left;
+  }
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .navbar {
+    width: 40%;
+  }
+  #my-story .my-story-content {
+    flex-direction: row; /* Row layout on larger screens */
+    text-align: left; /* Align text left on larger screens */
+    align-items: flex-start; /* Align items to the start of the cross axis */
+  }
+  #my-story .photo-container {
+    margin-bottom: 0; /* Remove bottom margin in row layout */
+    margin-right: 3rem; /* Add right margin for spacing */
+  }
+  #my-story .story-text-content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Adjust navbar for smaller screens */
+  .navbar {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+    border-radius: 0;
+    margin-top: 0;
+  }
+  .navbar .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+  .nav-links a {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg: breakpoint */
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
